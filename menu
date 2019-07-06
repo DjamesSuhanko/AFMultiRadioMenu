@@ -67,10 +67,10 @@ ntpConfig(){
 menuUpdate(){
     log "Buscando atualizacao"
     $dialogo --stdout --msgbox "O menu sera interrompido apos atualizacao e devera ser executado novamente." 0 0
-    rm -rf menuConfig
+    rm -rf AFMultiRadioMenu
     git clone $GIT_MENU_URL
-    mv menuConfig/* /home/pi/menu/
-    rm -rf menuConfig
+    mv AFMultiRadioMenu/* /home/pi/menu/
+    rm -rf AFMultiRadioMenu
     rm -f /home/pi/menu/READ*
     exit 0 
 }
