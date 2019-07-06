@@ -12,11 +12,9 @@ mount -o remount,rw /
 
 dialogo=`which dialog`
 DIR_PH="/home/pi/menu"
-LOG="/home/pi/menu/ph.log"
+LOG="/home/pi/menu/afmenu.log"
 WIFI_TARGET='/etc/wpa_supplicant/wpa_supplicant.conf'
 GIT_MENU_URL="https://github.com/DjamesSuhanko/AFMultiRadioMenu.git" 
-DEVICE_SKELETRON="/home/pi/devices/skeletron/skeletron.py"
-DEVICE_BASE_DIR="/home/pi/devices"
 
 export DIALOGRC=$DIR_PH/theme.cfg
 mkdir -p $DIR_PH
