@@ -1,0 +1,17 @@
+[ sáb jul 6 13:43:09 -03 2019 ] Configurador iniciado 
+sáb jul 6 13:43:45 -03 2019 Verificando conectividade
+sáb jul 6 13:43:45 -03 2019 Conectividade: Ok
+sáb jul 6 13:44:09 -03 2019 Consultando IP publico
+sáb jul 6 13:44:13 -03 2019 Checagem do IP local: 
+sáb jul 6 13:44:36 -03 2019 Configuracao de DNS
+sáb jul 6 13:44:41 -03 2019 Entrada de DNS manual
+sáb jul 6 13:44:45 -03 2019 Teste de DNS
+sáb jul 6 13:45:03 -03 2019 Mostrando DNS atual
+sáb jul 6 13:45:18 -03 2019 Configuracao de DNS
+sáb jul 6 13:45:19 -03 2019 Usando DNS do Google
+sáb jul 6 13:45:20 -03 2019 Teste de DNS
+sáb jul 6 13:45:41 -03 2019 Configurando NTP
+sáb jul 6 13:45:53 -03 2019 Rpi IP: 192.168.1.253
+sáb jul 6 13:45:53 -03 2019 server 192.168.1.253 prefer
+[ sáb jul 6 13:49:19 -03 2019 ] Configurador iniciado 
+sáb jul 6 13:49:27 -03 2019 Exibindo configuracoes WiFi
