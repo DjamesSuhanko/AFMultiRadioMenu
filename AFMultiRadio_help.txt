@@ -15,8 +15,8 @@ Sem conectividade com a Internet o sistema deve funcionar.
 Se for desejado consultar o app do celular de fora, sera necessario.
 
 [broker]
-Inicia o servidor Blynk para receber conexoes do app e para a
-comunicacao inicial dos dispositivos.
+Inicia o servidor MQTT
+Nao implementado, instale o broker para fazer uso dessa funcao.
 
 [remote]
 Para ou inicia o servidor SSH para manutencao remota. Se habilita-lo,
