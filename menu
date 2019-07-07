@@ -21,6 +21,17 @@ mkdir -p $DIR_PH
 
 echo "[" $(date) "] Configurador iniciado " >>$LOG
 
+disableRadios(){
+    $dialogo --stdout --yesno "Deseja realmente desabilitar o servico de radio?" 0 0
+    [ $? -gt 0 ] && {
+        $dialogo --stdout --msgbox "Ok, processo abortado." 0 0
+        return
+    }
+    service AFMultiRadio stop
+    systemctl disable AFMultiRadio
+    $dialogo --stdout --msgbox "Servico desabilitado." 0 0
+}
+
 getMAC(){
     MAC_ADDR=`ifconfig wlan0|egrep ether| awk '{print $2}'`
     $dialogo --stdout --title "MAC address" --msgbox "$MAC_ADDR" 0 0
@@ -250,6 +261,7 @@ while true; do
     dns 'Teste de DNS (Ultimo caso)' \
     confDNS 'Configurar DNS' \
     showDNS 'Mostra o DNS configurado' \
+    AFMR 'Desabilita servico de radio' \
     update 'Atualiza esse programa' \
     dataHora 'Configura o servidor de horas' \
     reiniciar 'Reinicia com as novas configuracoes' \
@@ -279,10 +291,11 @@ while true; do
         maxSys) resizeFS ;;
         MAC) getMAC ;;
         ajuda) helpMe ;;
-	mail) emailConfig ;;
-	update) menuUpdate ;; 
-	dataHora) ntpConfig ;;
-	sair) break;;
+	     mail) emailConfig ;;
+	     update) menuUpdate ;; 
+	     dataHora) ntpConfig ;;
+        AFMR) disableRadios ;; 
+	     sair) break;;
     esac
 
 done
